@@ -11,12 +11,20 @@ const messages = [
     text: 'Hello world!',
     user: 'Charles',
     added: new Date(),
+  },
+  {
+    text: 'This is a message.',
+    user: 'Gus',
+    added: new Date(),
   }
 ];
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', function (req, res, next) {
   res.render('index', { title: 'Mini Messageboard', messages: messages });
 });
 
-module.exports = router;
+module.exports = {
+  router,
+  messages
+}

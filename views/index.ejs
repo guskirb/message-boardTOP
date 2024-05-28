@@ -9,17 +9,25 @@
 </head>
 
 <body>
-  <% messages.forEach((message)=> { %>
-    <h2>
-      <%= message.user %>
-    </h2>
-    <p class="msgText">
-      <%= message.text %>
-    </p>
-    <p class="msgDate">
-      <%= message.added %>
-    </p>
-    <% }); %>
+  <h1>
+    <%= title %>
+  </h1>
+  <div class="msgBoard">
+    <% messages.forEach((message)=> { %>
+      <div class="msg">
+        <h2>
+          <%= message.user + ":" %>
+        </h2>
+        <p class="msgText">
+          <%= message.text %>
+        </p>
+        <p class="msgDate">
+          <%= message.added %>
+        </p>
+      </div>
+      <% }); %>
+  </div>
+  <a href="/new"><button>Add Message</button></a>
 </body>
 
 </html>

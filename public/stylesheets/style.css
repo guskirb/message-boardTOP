@@ -1,8 +1,89 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 20px;
+  --accent-color: #0365d67a;
 }
 
 a {
-  color: #00B7FF;
+  color: #00b7ff;
+}
+
+h1 {
+  margin: 0;
+}
+
+.msgBoard {
+  max-height: 70vh;
+  width: 450px;
+  max-width: 450px;
+  overflow: scroll;
+  overflow-x: hidden;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  display: flex;
+  flex-flow: column;
+  border: solid 3px var(--accent-color);
+}
+
+.msg h2 {
+  margin: 0;
+}
+
+.msgText {
+  font-size: 1.2em;
+  margin-block: 2px;
+}
+
+.msgDate {
+  font-size: 0.8em;
+}
+
+.msg {
+  margin: 10px;
+  padding: 10px;
+  border-left: solid 2px var(--accent-color);
+}
+
+.formContainer {
+  display: flex;
+  flex-flow: column;
+}
+
+.msgForm {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+::-webkit-scrollbar {
+  width: 1.2em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: none;
+  margin-block: 0.1em;
+  border-radius: 0 20px 20px 0;
+}
+
+::-webkit-scrollbar-thumb {
+  border: solid 0.3em rgb(255, 255, 255);
+  background: var(--accent-color);
+  border-radius: 10px;
+}
+
+button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--accent-color);
+  color: white;
+}
+
+button:hover {
+  background-color: #0365d6ad;
 }
